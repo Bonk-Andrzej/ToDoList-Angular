@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <form [formGroup]="addForm" (ngSubmit)="add()">
     <div formArrayName="taskName">
       <div *ngFor="let task of addForm.get('taskName')['controls']; let i = index">
@@ -6,8 +6,8 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="addForm.invalid" >Dodaj</button>
-    <button type="button" (click)="addField()">Dodaj więcej</button>
+    <button type="submit" class="btn btn-secondary"  [disabled]="addForm.invalid" >Add</button>
+    <button type="button" class="btn btn-secondary"  (click)="addField()">Add more</button>
   </form>
 
 </div>

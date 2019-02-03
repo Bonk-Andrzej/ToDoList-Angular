@@ -1,6 +1,8 @@
 li {
   background: lightgray;
+  flex-grow: 8;
   margin: 5px;
+  /*background-color: #85CDBC;*/
 }
 
 .odd-li {
@@ -12,3 +14,10 @@ li {
   background: pink;
   margin: 5px;
 }
+
+
+
+
+
+
+
