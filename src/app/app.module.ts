@@ -10,13 +10,21 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app.routing.module";
 import {DoneTaskComponent} from "./done-task/done-task.component";
 import {TodoTaskComponent} from "./todo-task/todo-task.component";
+import {CheckedDirective} from "./shared/checked.directive";
+import {DateDirective} from "./shared/date.directive";
+import {TransformTaskPipe} from "./shared/transform-task.pipe";
+import {SortNamePipe} from "./shared/sort-name.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     DoneTaskComponent,
-    TodoTaskComponent
+    TodoTaskComponent,
+    CheckedDirective,
+    DateDirective,
+    TransformTaskPipe,
+    SortNamePipe,
 
   ],
   imports: [
