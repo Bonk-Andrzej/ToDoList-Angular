@@ -1,8 +1,9 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {DoneTaskComponent} from "./done-task/done-task.component";
-import {TodoTaskComponent} from "./todo-task/todo-task.component";
-
+import {TodoTaskComponent} from './todo-task/todo-task.component';
+import {DoneTaskComponent} from './done-task/done-task.component';
+import {LoginComponent} from './auth/login/login.component';
+import {AuthGuardService} from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   {
@@ -10,17 +11,20 @@ const appRoutes: Routes = [
     redirectTo: '/todoTask',
     pathMatch: 'full'
   },
-
-  {
-    path: 'doneTask',
-    component: DoneTaskComponent
-  },
   {
     path: 'todoTask',
-    component: TodoTaskComponent
+    component: TodoTaskComponent,
+    canActivate: [AuthGuardService]
   },
-
-
+  {
+    path: 'doneTask',
+    component: DoneTaskComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
