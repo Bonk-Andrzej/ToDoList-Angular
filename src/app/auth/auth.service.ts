@@ -2,12 +2,14 @@ import {Injectable} from '@angular/core';
 import {User} from 'firebase/app';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {Router} from '@angular/router';
+import {NotificationService} from "../services/notification.service";
 
 @Injectable()
 export class AuthService {
   user: User;
 
-  constructor(public angularFire: AngularFireAuth, private router: Router) {
+  constructor(public angularFire: AngularFireAuth, private router: Router,
+              private notification: NotificationService) {
     angularFire.authState.subscribe(user => {
       this.user = user;
     });
@@ -21,6 +23,7 @@ export class AuthService {
       })
       .catch(err => {
         console.log(err);
+        this.notification.warn(err);
       });
   }
 
@@ -32,6 +35,7 @@ export class AuthService {
       })
       .catch(err => {
         console.log(err);
+        this.notification.warn(err);
       });
   }
 

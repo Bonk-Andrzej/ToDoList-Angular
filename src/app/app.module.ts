@@ -2,7 +2,15 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
-
+import {
+  MatCardModule,
+  MatDialogModule, MatIconModule,
+  MatListModule,
+  MatPaginatorModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule, MatToolbarModule
+} from '@angular/material';
 import {AppComponent} from './app.component';
 import {AddTaskComponent} from "./add-task/add-task.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -19,6 +27,10 @@ import {SortNamePipe} from "./shared/sort-name.pipe";
 import {AuthGuardService} from "./auth/auth-guard.service";
 import {AuthService} from "./auth/auth.service";
 import {LoginComponent} from "./auth/login/login.component";
+import {ConfirmDialogComponent} from "./shared/confirm-dialog/confirm-dialog.component";
+import {DialogService} from "./services/dialog.service";
+import {NotificationService} from "./services/notification.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const config = {
   apiKey: 'AIzaSyBJlo5u95DM6MQ3MOCBon-QkZxE2Jn9l7I',
@@ -39,7 +51,8 @@ const config = {
     DateDirective,
     TransformTaskPipe,
     SortNamePipe,
-    LoginComponent
+    LoginComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +61,26 @@ const config = {
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
+    MatCardModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
-  providers: [TasksService, HttpService, AuthGuardService, AuthService],
-  bootstrap: [AppComponent]
+  exports: [
+    MatListModule,
+    MatDialogModule,
+    MatSnackBarModule,
+  ],
+  providers: [TasksService, HttpService, AuthGuardService, AuthService, DialogService, NotificationService],
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmDialogComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
