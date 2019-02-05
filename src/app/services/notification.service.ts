@@ -9,23 +9,18 @@ export class NotificationService {
   constructor(public snackBar: MatSnackBar) {
   }
 
-  config: MatSnackBarConfig = {
-    duration: 1000,
-    horizontalPosition: 'right',
-    verticalPosition: 'top'
-  };
-
-
   success(msg) {
-    this.config['panelClass'] = ['notification', 'success'];
-    this.snackBar.open(msg, '', this.config);
+    const config = new MatSnackBarConfig();
+    config.panelClass = ['background-red'];
+    config.duration = 5000;
+    this.snackBar.open(msg, null, config);
   }
 
   warn(msg) {
-    // this.config['panelClass'] = ['notification', 'warn'];
     const config = new MatSnackBarConfig();
     config.panelClass = ['background-red'];
-    this.snackBar.open(msg, '', this.config);
+    config.duration = 5000;
+    this.snackBar.open(msg, '', config);
   }
 
 }

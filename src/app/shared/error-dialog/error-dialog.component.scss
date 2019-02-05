@@ -1,0 +1,51 @@
+.error-component {
+  background-color: red;
+  height: 100px;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 37%;
+  width: 300px;
+  margin-left: -100px;
+
+}
+
+.errorContainer {
+  height: 150px;
+  width: 300px;
+  justify-content: center;
+  background: red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+
+  .messageContainer {
+    height: 60%;
+
+    p {
+      margin-top: 10px;
+      text-align: center;
+
+    }
+  }
+
+  .button-container {
+    display: flex;
+    height: 100px;
+
+    button {
+      background-color: #85CDBC;
+      width: 25%;
+      height: 40%;
+      margin-right: 20px;
+      margin-left: auto;
+      text-align: center;
+      padding: 2px 2px 2px 2px;
+      border: none;
+      color: black;
+    }
+
+
+  }
+}

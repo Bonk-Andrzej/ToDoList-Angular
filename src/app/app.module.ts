@@ -31,6 +31,7 @@ import {ConfirmDialogComponent} from "./shared/confirm-dialog/confirm-dialog.com
 import {DialogService} from "./services/dialog.service";
 import {NotificationService} from "./services/notification.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component';
 
 const config = {
   apiKey: 'AIzaSyBJlo5u95DM6MQ3MOCBon-QkZxE2Jn9l7I',
@@ -52,7 +53,8 @@ const config = {
     TransformTaskPipe,
     SortNamePipe,
     LoginComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,7 @@ const config = {
   ],
   providers: [TasksService, HttpService, AuthGuardService, AuthService, DialogService, NotificationService],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmDialogComponent]
+  entryComponents: [ConfirmDialogComponent, ErrorDialogComponent]
 })
 export class AppModule {
 }
