@@ -6,7 +6,7 @@ import {DialogService} from "../services/dialog.service";
 @Component({
   selector: 'app-todo-task',
   templateUrl: './todo-task.component.html',
-  styleUrls: ['./todo-task.component.css']
+  styleUrls: ['./todo-task.component.scss']
 })
 export class TodoTaskComponent implements OnInit {
 

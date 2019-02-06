@@ -7,7 +7,7 @@ export class DateDirective {
 
   @Input()
   private date: string;
-  private paragraph; // <p>
+  private paragraph;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.paragraph = this.renderer.createElement('p');

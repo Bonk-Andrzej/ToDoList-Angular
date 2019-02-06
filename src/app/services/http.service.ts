@@ -17,7 +17,7 @@ export class HttpService {
   getParams(): HttpParams {
     const uid = this.authService.user.uid;
     const query = {userId: uid};
-    return new HttpParams().set('apiKey', 'BhPwQGX6BZVlXx4v-AKprVBnC-mXuXzV').append('q', JSON.stringify(query));
+    return new HttpParams().set('apiKey', '_vWBIytkPhm49m4Opp9Gem_7xTzQ9dQf').append('q', JSON.stringify(query));
   }
 
   getTasks(): Observable<Array<Task>> {
