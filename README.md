@@ -9,15 +9,16 @@ Project developed using Gitflow Workflow.
 * MLab noSQL database to store users tasks 
 
 #### Examples of some features
-![login](img/todoList-login.png)
-![email error](img/ToDoList-emailError.png)
-![login unregistered user](img/ToDoList-error-loginUnRegisteredUsser.png)
-![register bad password](img/ToDoList-error-registerWithBadPassword.png)
-![password error](img/ToDoList-passwordError.png)
-![login success](img/ToDoList-succesLogin.png)
-![task date](img/ToDoList-taskDate.png)
-![done tasks](img/ToDoList-doneTasks.png)
-![task delete](img/ToDoList-deletingTask.png)
+![login](img/toDoList-login.png)
+![email error1](img/toDoList-error-emailAlreadyInUse.png)
+![email error2](img/toDoList-error-emailBadlyFormatted.png)
+![login unregistered user](img/toDoList-error-logUnregisterUser.png)
+![register bad password](img/toDoList-error-toSmallPassword.png)
+![password error](img/toDoList-error-wrongPassword.png)
+![tasks list](img/toDoList-taskList.png)
+![task date](img/toDoList-taskListDate.png)
+![done tasks](img/toDoList-doneTasksList.png)
+![task delete](img/toDoList-taskDeleteValidation.png)
 
 #### Build and run Angular application (localhost:4200)
 
@@ -32,5 +33,6 @@ $ ng serve --open
 - [x] Validation for deleting task
 - [x] Adding pipes for improve readability
 - [x] Showing the date when the mouse hovers over task or task already done
+- [x] Add button is disabled when text field is empty
 
 
