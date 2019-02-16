@@ -26,7 +26,7 @@ export class AuthService {
       })
       .catch(err => {
         console.log(err);
-
+        // this.notification.warn(err);
         this.dialogService.openErrorDialog(err);
       });
   }
@@ -39,7 +39,8 @@ export class AuthService {
       })
       .catch(err => {
         console.log(err);
-        this.notification.warn(err);
+        // this.notification.warn(err);
+        this.dialogService.openErrorDialog(err);
       });
   }
 

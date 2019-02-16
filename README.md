@@ -1,27 +1,36 @@
-# TODO
+# ToDoList 
+Simple application for managing our tasks.
+Made to learn the basics of Angular.
+Project developed using Gitflow Workflow. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+#### Stack
+* Angular 7, TypeScript, HTML, Scss
+* FireBase for user authentication
+* MLab noSQL database to store users tasks 
 
-## Development server
+#### Examples of some features
+![login](img/todoList-login.png)
+![email error](img/ToDoList-emailError.png)
+![login unregistered user](img/ToDoList-error-loginUnRegisteredUsser.png)
+![register bad password](img/ToDoList-error-registerWithBadPassword.png)
+![password error](img/ToDoList-passwordError.png)
+![login success](img/ToDoList-succesLogin.png)
+![task date](img/ToDoList-taskDate.png)
+![done tasks](img/ToDoList-doneTasks.png)
+![task delete](img/ToDoList-deletingTask.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Build and run Angular application (localhost:4200)
 
-## Code scaffolding
+```sh
+$ ng serve --open
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Features
+- [x] Registration new user or logging in already existing
+- [x] Unregistered user can't enter to task field or done field
+- [x] Notification for registration and login errors
+- [x] Validation for deleting task
+- [x] Adding pipes for improve readability
+- [x] Showing the date when the mouse hovers over task or task already done
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -2,7 +2,7 @@
 <p> Completed tasks: {{tasksDone.length}}</p>
 <ul>
   <li appChecked appDate [date]="task.end" *ngFor="let task of tasksDone">
-    {{task.name | transformTask: ' - super!'}}
+    {{task.name | transformTask: ' - DONE!'}}
   </li>
 </ul>
 </div>
