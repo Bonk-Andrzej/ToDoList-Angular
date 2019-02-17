@@ -8,6 +8,15 @@ Project developed using Gitflow Workflow.
 * FireBase for user authentication
 * MLab noSQL database to store users tasks 
 
+#### Features
+- [x] Registration new user or logging in already existing
+- [x] Unregistered user can't enter to task field or done field
+- [x] Notification for registration and login errors
+- [x] Validation for deleting task
+- [x] Adding pipes for improve readability
+- [x] Showing the date when the mouse hovers over task or task already done
+- [x] Add button is disabled when text field is empty
+
 #### Examples of some features
 ![login](img/toDoList-login.png)
 ![email error1](img/toDoList-error-emailAlreadyInUse.png)
@@ -25,14 +34,4 @@ Project developed using Gitflow Workflow.
 ```sh
 $ ng serve --open
 ```
-
-#### Features
-- [x] Registration new user or logging in already existing
-- [x] Unregistered user can't enter to task field or done field
-- [x] Notification for registration and login errors
-- [x] Validation for deleting task
-- [x] Adding pipes for improve readability
-- [x] Showing the date when the mouse hovers over task or task already done
-- [x] Add button is disabled when text field is empty
-
 
