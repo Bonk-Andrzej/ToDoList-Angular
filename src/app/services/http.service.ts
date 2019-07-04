@@ -31,12 +31,3 @@ export class HttpService {
     });
   }
 }
-
-
-
-
-
-
-
-
-
