@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Task } from '../models/task';
 import { HttpService } from './http.service';
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject, Observable} from 'rxjs';
 import {AngularFireAuth} from 'angularfire2/auth';
 
 @Injectable()

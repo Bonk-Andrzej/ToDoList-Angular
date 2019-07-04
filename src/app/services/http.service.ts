@@ -20,6 +20,7 @@ export class HttpService {
     return new HttpParams().set('apiKey', '_vWBIytkPhm49m4Opp9Gem_7xTzQ9dQf').append('q', JSON.stringify(query));
   }
 
+
   getTasks(): Observable<Array<Task>> {
     return this.http.get<Array<Task>>(this.URL_DB, {params: this.getParams()});
   }
