@@ -32,9 +32,3 @@ export class HttpService {
   }
 }
 
-
-
-
-
-
-
